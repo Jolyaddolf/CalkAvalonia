@@ -86,9 +86,9 @@
 		<Button  Content="4"   Grid.Row="1" Grid.Column="0"/>
 		<Button  Content="5"   Grid.Row="1" Grid.Column="0"/>
 		<Button  Content="6"   Grid.Row="1" Grid.Column="0"/>
-		<Button  Content="7"    Grid.Row="1" Grid.Column="0"/>
-		<Button  Content="8"   Grid.Row="1" Grid.Column="0"/>
-		<Button  Content="9"   Grid.Row="1" Grid.Column="0"/>
+		<Button  Content="7"    Grid.Row="4" Grid.Column="0"/>
+		<Button  Content="8"   Grid.Row="3" Grid.Column="0"/>
+		<Button  Content="9"   Grid.Row="2" Grid.Column="0"/>
 		<Button   Content="0"    Grid.Row="1" Grid.Column="0"/>
 
 		<Button  Content="←"  Grid.Row="2" Grid.Column="9"   />
