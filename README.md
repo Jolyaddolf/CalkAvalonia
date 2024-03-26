@@ -1,1 +1,2 @@
-# CalkAvalonia
+Avalonia project
+     Инженерный калькулятор 
