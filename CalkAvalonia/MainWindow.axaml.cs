@@ -88,6 +88,17 @@ namespace CalkAvalonia
                 double answer = Convert.ToDouble(number1 - number2);
                 choc = answer;
                 TextBox.Text = Convert.ToString(choc);
+
+            }
+            else if(numb == "*") 
+            {
+                choc2 += Convert.ToDouble(TextBox.Text);
+                double number1 = Convert.ToDouble(choc);
+                double number2 = Convert.ToDouble(choc2);
+                double result = Convert.ToDouble(number1 * number2);
+                choc = result;
+                TextBox.Text = $"{choc}";
+
             }
            
             
@@ -145,7 +156,9 @@ namespace CalkAvalonia
 
         private void DecimalButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            if ((TextBox.Text.IndexOf(",") == -1) && (TextBox.Text.IndexOf(" ") == -1))
+                TextBox.Text += ",";
+                
         }
 
       
@@ -162,7 +175,10 @@ namespace CalkAvalonia
 
         private void MultiplyButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            numb = "*";
+            choc = Convert.ToDouble(TextBox.Text);
+            string numebr = "";
+            TextBox.Text = numebr;
         }
 
         private void DivideButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -184,7 +200,8 @@ namespace CalkAvalonia
 
         private void ClearEntryButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            string number = "";
+            TextBox.Text = number;
         }
 
         private void BackspaceButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -229,12 +246,14 @@ namespace CalkAvalonia
 
         private void CloseParenthesisButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            string number = ")";
+            TextBox.Text += number;
         }
 
         private void OpenParenthesisButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            string number = "(";
+            TextBox.Text += number;
         }
 
         private void NaturalLogButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
