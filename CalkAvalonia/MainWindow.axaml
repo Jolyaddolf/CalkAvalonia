@@ -2,9 +2,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" Width="350" d:DesignHeight="500"
+        mc:Ignorable="d" Width="300" d:DesignHeight="500"
+		MaxWidth="350" MaxHeight="500" MinWidth="350" MinHeight="500"
         x:Class="CalkAvalonia.MainWindow"
-        Title="CalkAvalonia">
+        Title="CalkAvalonia" 
+		Background="#708090"
+		
+		>
 
 
 
@@ -12,21 +16,22 @@
 		<Style Selector="Button">
 			<Setter Property="Foreground" Value="White" />
 			<Setter Property="BorderThickness" Value="2" />
-			<Setter Property="Background" Value="Gray" />
-			<Setter Property="BorderBrush" Value="Black" />
-			<Setter Property="CornerRadius" Value="5"/>
-			<Setter Property="FontSize" Value="9" />
+			<Setter Property="Background" Value="#778899" />
+			<Setter Property="BorderBrush" Value="#707070" />
+			<Setter Property="CornerRadius" Value="3"/>
+			<Setter Property="FontSize" Value="14" />
 			<Setter Property="HorizontalContentAlignment" Value="Center" />
 			<Setter Property="VerticalContentAlignment" Value="Center"/>
-			<Setter Property="Width" Value="33"/>
-			<Setter Property="Height" Value="35"/>
+			<Setter Property= "Width" Value="55" />
+			<Setter Property="Height" Value="52"/>
+			<Setter Property="Margin" Value="0,0,0,0"/>
 
 
 		</Style>
 
 	</Window.Styles>
 
-	<Grid	Background="LightGray">
+	<Grid Background="#708090" Margin="5,5,5,5"	>
 
 		<Grid.RowDefinitions>
 			<RowDefinition></RowDefinition>
@@ -38,9 +43,7 @@
 			<RowDefinition></RowDefinition>
 			<RowDefinition></RowDefinition>
 			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
+			
 		</Grid.RowDefinitions>
 
 		<Grid.ColumnDefinitions>
@@ -50,64 +53,62 @@
 			<ColumnDefinition></ColumnDefinition>
 			<ColumnDefinition></ColumnDefinition>
 			<ColumnDefinition></ColumnDefinition>
-			<ColumnDefinition></ColumnDefinition>
-			<ColumnDefinition></ColumnDefinition>
-			<ColumnDefinition></ColumnDefinition>
-			<ColumnDefinition></ColumnDefinition>
+			
+		
 		</Grid.ColumnDefinitions>
 
-		<TextBox Grid.Row="0" Grid.Column="0" Width="667" Background="White" >
+		<TextBox VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" Watermark="0" x:Name="TextBox" Grid.Row="0" Grid.Column="0"  Height="65 " Width="640" Margin="0,-5,0,5" >
 
 
 
 		</TextBox>
 
+		<Button Name="SineButton" Content="sin" Grid.Row="1" Grid.Column="3"/>
+		<Button Name="SquareButton" Content="Х²" Grid.Row="2" Grid.Column="0"/>
+		<Button Name="FactorialButton" Content="n!" Grid.Row="2" Grid.Column="2"/>
+		<Button Name="CosineButton" Content="Cos" Grid.Row="5" Grid.Column="0"/>
+		<Button Name="DmsButton" Content="dms" Grid.Row="8" Grid.Column="0"/>
+		<Button Name="TangentButton" Content="tan" Grid.Row="1" Grid.Column="1"/>
+		<Button Name="NaturalLogButton" Content="In" Grid.Row="1" Grid.Column="0"/>
+		<Button Name="OpenParenthesisButton" Content="(" Grid.Row="2" Grid.Column="3"/>
+		<Button Name="CloseParenthesisButton" Content=")" Grid.Row="2" Grid.Column="4"/>
+		<Button Name="ExponentButton" Content="Exp" Grid.Row="4" Grid.Column="1"/>
+		<Button Name="PiButton" Content="π" Grid.Row="5" Grid.Column="1"/>
+		<Button Name="CubeButton" Content="x³" Grid.Row="6" Grid.Column="1"/>
+		<Button Name="PowerButton" Content="x^y" Grid.Row="7" Grid.Column="1"/>
+		<Button Name="SquareRootButton" Content="√x" Grid.Row="8" Grid.Column="1"/>
+		<Button Name="CubedButton" Content="10³" Grid.Row="2" Grid.Column="1"/>
+		<Button Name="PiButton2" Content="π" Grid.Row="1" Grid.Column="2"/>
 
-		<Button Content="sin"/>
-		<Button Content="In"/>
-		<Button Content="Х²"/>
-		<Button Content="n!"/>
-		<Button Content="Cos"/>
-		<Button Content="sin"/>
-		<Button Content="sin"/>
-		<Button Content="sin"/>
-		<Button Content="sin"/>
-		<Button Content="sin"/>
-		<Button Content="sin"/>
-		<Button Content="sin"/>
+		<Button Name="BackspaceButton" Content="←"  Grid.Row="4" Grid.Column="2"   />
+		<Button Name="ClearEntryButton" Content="CE"    Grid.Row="4" Grid.Column="3"/>
+		<Button Name="ClearButton" Content="C"    Grid.Row="4" Grid.Column="4"/>
+		<Button Name="Ravno" Content="="  Height="100" Grid.Row="7" Margin="0,-59,0,0" Grid.Column="6"/>
+		<Button Name="RootButton" Content="√"    Grid.Row="1" Grid.Column="4"/>
+		<Button Name="DivideButton" Content="/"   Grid.Row="1" Grid.Column="5"/>
+		<Button Name="MultiplyButton" Content="*"   Grid.Row="3" Grid.Column="5"/>
+		<Button Name="PercentButton" Content="%"   Grid.Row="4" Grid.Column="0"/>
+		<Button Name="ReciprocalButton" Content="1/x"   Grid.Row="2" Grid.Column="6"/>
+		<Button Name="Minus" Content="-"   Grid.Row="4" Grid.Column="5"/>
+		<Button Name="DecimalButton" Content=","   Grid.Row="8" Grid.Column="4"/>
+		<Button Name="Plus" Content="+"   Grid.Row="5" Grid.Column="5"/>
+		<Button Name="MemoryClearButton" Content= "MC"    Grid.Row="3" Grid.Column="0"/>
+		<Button Name="MemoryRecallButton" Content= "MR"    Grid.Row="3" Grid.Column="1"/>
+		<Button Name="MemorySaveButton" Content= "MS"   Grid.Row="3" Grid.Column="2"/>
+		<Button Name="MemorySubtractButton" Content= "M-"   Grid.Row="3" Grid.Column="3"/>
+		<Button Name="MemoryAddButton" Content= "M+"   Grid.Row="3" Grid.Column="4" />
+		<Button Name="NegateButton" Content="+/-"  Grid.Row="8"  Grid.Column="5"/>
 
-
-
-
-
-		<Button  Content="1" Grid.Row="1" Grid.Column="0"/>
-		<Button  Content="2"   Grid.Row="1" Grid.Column="0"/>
-		<Button  Content="3"   Grid.Row="1" Grid.Column="0"/>
-		<Button  Content="4"   Grid.Row="1" Grid.Column="0"/>
-		<Button  Content="5"   Grid.Row="1" Grid.Column="0"/>
-		<Button  Content="6"   Grid.Row="1" Grid.Column="0"/>
-		<Button  Content="7"    Grid.Row="4" Grid.Column="0"/>
-		<Button  Content="8"   Grid.Row="3" Grid.Column="0"/>
-		<Button  Content="9"   Grid.Row="2" Grid.Column="0"/>
-		<Button   Content="0"    Grid.Row="1" Grid.Column="0"/>
-
-		<Button  Content="←"  Grid.Row="2" Grid.Column="9"   />
-		<Button  Content="CE"    Grid.Row="2" Grid.Column="8"/>
-		<Button  Content="C"    Grid.Row="2" Grid.Column="7"/>
-		<Button  Content="="   Grid.Row="7" Grid.Column="9"/>
-		<Button  Content="√"    Grid.Row="2" Grid.Column="6"/>
-		<Button  Content="/"   Grid.Row="3" Grid.Column="9"/>
-		<Button  Content="*"   Grid.Row="3" Grid.Column="8"/>
-		<Button  Content="%"   Grid.Row="3" Grid.Column="7"/>
-		<Button  Content="1/x"   Grid.Row="3" Grid.Column="6"/>
-		<Button  Content="-"   Grid.Row="1" Grid.Column="0"/>
-		<Button  Content="+"   Grid.Row="1" Grid.Column="0"/>
-		<Button  Content= "="   Grid.Row="1" Grid.Column="0"/>
-		<Button  Content= "MC"    Grid.Row="1" Grid.Column="9"/>
-		<Button  Content= "MR"    Grid.Row="1" Grid.Column="8"/>
-		<Button  Content= "MS"   Grid.Row="1" Grid.Column="7"/>
-		<Button  Content= "M-"   Grid.Row="1" Grid.Column="6"/>
-		<Button  Content= "M+"   Grid.Row="1" Grid.Column="5" />
+		<Button Name="one" Content="1" Background="White" Foreground="Black" Grid.Row="7" Grid.Column="2"/>
+		<Button Name="two" Content="2"  Background="White" Foreground="Black"  Grid.Row="7" Grid.Column="3"/>
+		<Button Name="three" Content="3"   Background="White" Foreground="Black" Grid.Row="7" Grid.Column="4"/>
+		<Button  Name="four" Content="4"   Grid.Row="6" Grid.Column="2" Background="White" Foreground="Black" />
+		<Button  Name="five" Content="5"   Grid.Row="6" Grid.Column="3" Background="White" Foreground="Black" />
+		<Button  Name="six" Content="6"   Grid.Row="6" Grid.Column="4" Background="White" Foreground="Black" />
+		<Button  Name="seven" Content="7"    Grid.Row="5" Grid.Column="2" Background="White" Foreground="Black" />
+		<Button Name="eight"  Content="8"   Grid.Row="5" Grid.Column="3" Background="White" Foreground="Black" />
+		<Button Name="nine" Content="9"   Grid.Row="5" Grid.Column="4" Background="White" Foreground="Black" />
+		<Button  Name="zero" Content="0"    Width="108" Grid.Row="8" Grid.Column="2" Background="White" Foreground="Black" />
 
 
 	</Grid>
