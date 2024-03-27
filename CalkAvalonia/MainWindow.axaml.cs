@@ -123,7 +123,10 @@ namespace CalkAvalonia
 
         private void MemoryClearButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            numb = "-";
+            choc = Convert.ToDouble(TextBox.Text);
+            string number = "";
+            TextBox.Text = number;
         }
 
         private void NegateButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
