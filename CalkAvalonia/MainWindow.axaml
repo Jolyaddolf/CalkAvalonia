@@ -109,7 +109,7 @@
 		<Button  Name="seven" Content="7"    Grid.Row="5" Grid.Column="2" Background="White" Foreground="Black" />
 		<Button Name="eight"  Content="8"   Grid.Row="5" Grid.Column="3" Background="White" Foreground="Black" />
 		<Button Name="nine" Content="9"   Grid.Row="5" Grid.Column="4" Background="White" Foreground="Black" />
-		<Button  Name="zero" Content="0"    Width="108" Grid.Row="8" Grid.Column="2" Background="White" Foreground="Black" />
+		<Button  Name="zero" Content="0"    Width="109" Grid.Row="8" Grid.Column="2" Background="White" Foreground="Black" />
 
 
 	</Grid>
