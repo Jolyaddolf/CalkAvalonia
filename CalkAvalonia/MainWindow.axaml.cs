@@ -13,6 +13,11 @@ namespace CalkAvalonia
         public MainWindow()
         {
             InitializeComponent();
+
+            /*Инициализация кнопок  методов для них
+            Обращение с помощью имени созданной кнопки
+            Методы для кнопок ксати сами созддавались когда я прописывал кнопки
+            */
             zero.Click += Zero_Click;
             one.Click += One_Click;
             two.Click += Two_Click;
@@ -59,52 +64,13 @@ namespace CalkAvalonia
             MemoryAddButton.Click += MemoryAddButton_Click;
             NegateButton.Click += NegateButton_Click;
             MemoryClearButton.Click += MemoryClearButton_Click;
-
-        }
-
-         void Ravno_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-        {
-            if (numb == "+")
-            {
-                choc2 = Convert.ToDouble(TextBox.Text);
-                double number1 = Convert.ToDouble(choc);
-                double number2 = Convert.ToDouble(choc2);
-                double answer = Convert.ToDouble(number1 + number2);
-                choc = answer;
-                TextBox.Text = Convert.ToString(choc);
-            }
-            else if (numb == "10x")
-            {
-                double number1 = Convert.ToDouble(choc);
-                double number2 = 10;
-                double number = Convert.ToDouble(Math.Pow(number2, number1));
-                TextBox.Text = $"{number}";
-            }
-            else if (numb == "-")
-            {
-                choc2 = Convert.ToDouble(TextBox.Text);
-                double number1 = Convert.ToDouble(choc);
-                double number2 = Convert.ToDouble(choc2);
-                double answer = Convert.ToDouble(number1 - number2);
-                choc = answer;
-                TextBox.Text = Convert.ToString(choc);
-
-            }
-            else if(numb == "*") 
-            {
-                choc2 += Convert.ToDouble(TextBox.Text);
-                double number1 = Convert.ToDouble(choc);
-                double number2 = Convert.ToDouble(choc2);
-                double result = Convert.ToDouble(number1 * number2);
-                choc = result;
-                TextBox.Text = $"{choc}";
-
-            }
-           
             
+
         }
 
-        private void Plus_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        
+
+        private void Plus_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)//Минус 
         {
             numb = "+";
 
@@ -113,7 +79,7 @@ namespace CalkAvalonia
             TextBox.Text = number;
         }
 
-        private void Minus_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void Minus_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)//Плюс
         {
             numb = "-";
             choc = Convert.ToDouble(TextBox.Text);
@@ -123,10 +89,7 @@ namespace CalkAvalonia
 
         private void MemoryClearButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            numb = "-";
-            choc = Convert.ToDouble(TextBox.Text);
-            string number = "";
-            TextBox.Text = number;
+           
         }
 
         private void NegateButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -157,7 +120,7 @@ namespace CalkAvalonia
        
         
 
-        private void DecimalButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void DecimalButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // запятая 
         {
             if ((TextBox.Text.IndexOf(",") == -1) && (TextBox.Text.IndexOf(" ") == -1))
                 TextBox.Text += ",";
@@ -176,7 +139,98 @@ namespace CalkAvalonia
             throw new System.NotImplementedException();
         }
 
-        private void MultiplyButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void RootButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+
+        private void ClearButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // C
+
+        {   //Подсмотрел на гит но чет фигня какаято
+             choc = choc2 = 0.0d;
+            string numebr = "";
+            TextBox.Text = numebr;
+        }
+
+        private void ClearEntryButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // CE
+        {
+            string number = "";
+            TextBox.Text = number;
+        }
+
+        private void BackspaceButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) //?
+        {    // удаление последнего символа из Text.box
+            if(!string.IsNullOrEmpty(TextBox.Text)) 
+            {
+              TextBox.Text = TextBox.Text.Remove(TextBox.Text.Length - 1);
+            
+            }
+        }
+
+
+
+
+
+        // Ниже Алгелебра там и Тригонометрия и т.п
+
+        void Ravno_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        {
+            if (numb == "+") //сложение 
+            {
+                choc2 = Convert.ToDouble(TextBox.Text);
+                double number1 = Convert.ToDouble(choc);
+                double number2 = Convert.ToDouble(choc2);
+                double answer = Convert.ToDouble(number1 + number2);
+                choc = answer;
+                TextBox.Text = Convert.ToString(choc);
+            }
+            else if (numb == "10x")
+            {
+                double number1 = Convert.ToDouble(choc);
+                double number2 = 10;
+                double number = Convert.ToDouble(Math.Pow(number2, number1));
+                TextBox.Text = $"{number}";
+            }
+            else if (numb == "-") // вычетание 
+            {
+                choc2 = Convert.ToDouble(TextBox.Text);
+                double number1 = Convert.ToDouble(choc);
+                double number2 = Convert.ToDouble(choc2);
+                double answer = Convert.ToDouble(number1 - number2);
+                choc = answer;
+                TextBox.Text = Convert.ToString(choc);
+
+            }
+            else if (numb == "*") // умножение 
+            {
+                choc2 += Convert.ToDouble(TextBox.Text);
+                double number1 = Convert.ToDouble(choc);
+                double number2 = Convert.ToDouble(choc2);
+                double result = Convert.ToDouble(number1 * number2);
+                choc = result;
+                TextBox.Text = $"{choc}";
+
+            }
+            else if (numb == "/") // деление 
+            {
+                choc2 += Convert.ToDouble(TextBox.Text);
+                double number1 = Convert.ToDouble(choc);
+                double number2 = Convert.ToDouble(choc2);
+                double result = Convert.ToDouble(number1 / number2);
+                choc = result;
+                TextBox.Text = $"{choc}";
+
+
+            }
+
+
+        }
+
+
+
+
+        private void MultiplyButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // умножение 
         {
             numb = "*";
             choc = Convert.ToDouble(TextBox.Text);
@@ -184,33 +238,14 @@ namespace CalkAvalonia
             TextBox.Text = numebr;
         }
 
-        private void DivideButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void DivideButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // деление
         {
-            throw new System.NotImplementedException();
-        }
-
-        private void RootButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-       
-
-        private void ClearButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void ClearEntryButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-        {
+            numb = "/";
+            choc = Convert.ToDouble(TextBox.Text);
             string number = "";
             TextBox.Text = number;
         }
 
-        private void BackspaceButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
 
         private void PiButton2_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
@@ -232,14 +267,20 @@ namespace CalkAvalonia
             throw new System.NotImplementedException();
         }
 
-        private void CubeButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void CubeButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)// Возведение в Куб
         {
-            throw new System.NotImplementedException();
+            double NumberOne = Convert.ToDouble(TextBox.Text);
+            double NumberTwo = 10;
+            double Number = Convert.ToDouble(Math.Pow(NumberTwo, NumberOne));
+            TextBox.Text = $"{Number}";
+
         }
 
-        private void PiButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void PiButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // число Pi
         {
-            throw new System.NotImplementedException();
+            string Pi = "3,1415926535897932384626433832795";
+            double result = Convert.ToDouble(Pi);
+            TextBox.Text = $"{result}";
         }
 
         private void ExponentButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -247,13 +288,13 @@ namespace CalkAvalonia
             throw new System.NotImplementedException();
         }
 
-        private void CloseParenthesisButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void CloseParenthesisButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // Скобка закрывается
         {
             string number = ")";
             TextBox.Text += number;
         }
 
-        private void OpenParenthesisButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void OpenParenthesisButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // скобка открывается 
         {
             string number = "(";
             TextBox.Text += number;
@@ -284,15 +325,30 @@ namespace CalkAvalonia
             throw new System.NotImplementedException();
         }
 
-        private void SquareButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void SquareButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // Возведение в 2-ю степень 
         {
-            throw new System.NotImplementedException();
+
+            // Почему-то не работает, а должно
+           double number1 = Convert.ToDouble(TextBox.Text);
+            double number = number1 * number1;
+            double result = Convert.ToDouble(number);
+            TextBox.Text = $"{result}";
         }
 
         private void SineButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             throw new System.NotImplementedException();
         }
+
+
+
+
+        // Ниже цифарки 
+
+
+
+
+
 
         private void Nine_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {

@@ -78,12 +78,12 @@
 		<Button Name="CubeButton" Content="x³" Grid.Row="6" Grid.Column="1"/>
 		<Button Name="PowerButton" Content="x^y" Grid.Row="7" Grid.Column="1"/>
 		<Button Name="SquareRootButton" Content="√x" Grid.Row="8" Grid.Column="1"/>
-		<Button Name="CubedButton" Content="10³" Grid.Row="2" Grid.Column="1"/>
+		<Button Name="CubedButton" Content="10x" Grid.Row="2" Grid.Column="1"/>
 		<Button Name="PiButton2" Content="π" Grid.Row="1" Grid.Column="2"/>
 
 		<Button Name="BackspaceButton" Content="←"  Grid.Row="4" Grid.Column="2"   />
-		<Button Name="ClearEntryButton" Content="CE"    Grid.Row="4" Grid.Column="3"/>
-		<Button Name="ClearButton" Content="C"    Grid.Row="4" Grid.Column="4"/>
+		<Button Name="ClearEntryButton" Content="CE" Background="Red"    Grid.Row="4" Grid.Column="3"/>
+		<Button Name="ClearButton" Content="C" Background="Orange"   Grid.Row="4" Grid.Column="4"/>
 		<Button Name="Ravno" Content="="  Height="100" Grid.Row="7" Margin="0,-59,0,0" Grid.Column="6"/>
 		<Button Name="RootButton" Content="√"    Grid.Row="1" Grid.Column="4"/>
 		<Button Name="DivideButton" Content="/"   Grid.Row="1" Grid.Column="5"/>
