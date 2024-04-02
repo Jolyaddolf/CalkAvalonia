@@ -16,8 +16,8 @@
 		<Style Selector="Button">
 			<Setter Property="Foreground" Value="White" />
 			<Setter Property="BorderThickness" Value="2" />
-			<Setter Property="Background" Value="#778899" />
-			<Setter Property="BorderBrush" Value="#707070" />
+			<Setter Property="Background" Value="#6495ED" />
+			<Setter Property="BorderBrush" Value="#707074" />
 			<Setter Property="CornerRadius" Value="10"/>
 			<Setter Property="FontSize" Value="14" />
 			<Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -32,7 +32,7 @@
 
 	</Window.Styles>
 
-	<Grid Background="#708090" Margin="5,5,5,5"	>
+	<Grid Background="#B0C4DE" Margin="5,5,5,5"	>
 
 		<Grid.RowDefinitions>
 			<RowDefinition></RowDefinition>
@@ -58,7 +58,7 @@
 		
 		</Grid.ColumnDefinitions>
 
-		<TextBox VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" Watermark="0" x:Name="TextBox" Grid.Row="0" Grid.Column="0"  Height="65 " Width="640" Margin="0,-5,0,5" >
+		<TextBox VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" Watermark="yamete kudasai" x:Name="TextBox" Grid.Row="0" Grid.Column="0"  Height="65 " Width="640" Margin="0,-5,0,5" >
 
 
 
@@ -80,6 +80,7 @@
 		<Button Name="SquareRootButton" Content="√x" Grid.Row="8" Grid.Column="1"/>
 		<Button Name="CubedButton" Content="10x" Grid.Row="2" Grid.Column="1"/>
 		<Button Name="PiButton2" Content="π" Grid.Row="1" Grid.Column="2"/>
+		<Button Name="Log" Content="Log" Grid.Row="7" Grid.Column="0"/>
 
 		<Button Name="BackspaceButton" Content="←"  Grid.Row="4" Grid.Column="2"   />
 		<Button Name="ClearEntryButton" Content="CE" Background="Red"    Grid.Row="4" Grid.Column="3"/>

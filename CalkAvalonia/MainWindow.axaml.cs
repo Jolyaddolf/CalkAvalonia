@@ -45,6 +45,7 @@ namespace CalkAvalonia
             SquareButton.Click += SquareButton_Click1;
             CubedButton.Click += CubedButton_Click;
             PiButton2.Click += PiButton2_Click;
+            Log.Click += Log_Click;
 
             BackspaceButton.Click += BackspaceButton_Click;
             ClearEntryButton.Click += ClearEntryButton_Click;
@@ -68,7 +69,7 @@ namespace CalkAvalonia
 
         }
 
-        
+       
 
         private void Plus_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)//Минус 
         {
@@ -283,9 +284,12 @@ namespace CalkAvalonia
             TextBox.Text = $"{result}";
         }
 
-        private void ExponentButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void ExponentButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)// Возводит число в указанную степень 
         {
-            throw new System.NotImplementedException();
+            double NumberOne = Convert.ToDouble(TextBox.Text);
+            double NumberTwo = 10;
+            double Number = Convert.ToDouble(Math.Pow(NumberTwo, NumberOne));
+            TextBox.Text = $"{Number}";
         }
 
         private void CloseParenthesisButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // Скобка закрывается
@@ -300,14 +304,27 @@ namespace CalkAvalonia
             TextBox.Text += number;
         }
 
-        private void NaturalLogButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void NaturalLogButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)//Возвращает логарифм с основанием 10 указанного числа.
         {
-            throw new System.NotImplementedException();
+            double number1 = Convert.ToDouble(TextBox.Text);
+            double number = Math.Log10(number1);
+            TextBox.Text = Convert.ToString(number);
+
+        }
+        private void Log_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)//Возвращает натуральный логарифм (с основанием e) указанного числа.
+        {
+            double number1 = Convert.ToDouble(TextBox.Text);
+            double number = Math.Log(number1);
+            TextBox.Text = Convert.ToString(number);
         }
 
-        private void TangentButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+
+
+        private void TangentButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) //Возвращает тангенс указанного угла.
         {
-            throw new System.NotImplementedException();
+            double number1 = Convert.ToDouble(TextBox.Text);
+            double number = Math.Tan(number1);
+            TextBox.Text = Convert.ToString(number);
         }
 
         private void DmsButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -315,9 +332,11 @@ namespace CalkAvalonia
             throw new System.NotImplementedException();
         }
 
-        private void CosineButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void CosineButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) //Возвращает косинус указанного угла
         {
-            throw new System.NotImplementedException();
+            double number1 = Convert.ToDouble(TextBox.Text);
+            double number = Math.Cos(number1);
+            TextBox.Text = Convert.ToString(number); ;
         }
 
         private void FactorialButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -335,9 +354,13 @@ namespace CalkAvalonia
             TextBox.Text = $"{result}";
         }
 
-        private void SineButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void SineButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e) // Возвращает синус указанного угла. 
+
+
         {
-            throw new System.NotImplementedException();
+            double number1 = Convert.ToDouble(TextBox.Text);
+            double number = Math.Sin(number1);
+            TextBox.Text = Convert.ToString(number);
         }
 
 
