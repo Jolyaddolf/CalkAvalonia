@@ -58,7 +58,7 @@
 		
 		</Grid.ColumnDefinitions>
 
-		<TextBox VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" Watermark="yamete kudasai" x:Name="TextBox" Grid.Row="0" Grid.Column="0"  Height="65 " Width="640" Margin="0,-5,0,5" >
+		<TextBox VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" Watermark="" x:Name="TextBox" Grid.Row="0" Grid.Column="0"  Height="65 " Width="640" Margin="0,-5,0,5" >
 
 
 
@@ -86,7 +86,7 @@
 		<Button Name="ClearEntryButton" Content="CE" Background="Red"    Grid.Row="4" Grid.Column="3"/>
 		<Button Name="ClearButton" Content="C" Background="Orange"   Grid.Row="4" Grid.Column="4"/>
 		<Button Name="Ravno" Content="="  Height="100" Grid.Row="7" Margin="0,-59,0,0" Grid.Column="6"/>
-		<Button Name="RootButton" Content="√"    Grid.Row="1" Grid.Column="4"/>
+	
 		<Button Name="DivideButton" Content="/"   Grid.Row="1" Grid.Column="5"/>
 		<Button Name="MultiplyButton" Content="*"   Grid.Row="3" Grid.Column="5"/>
 		<Button Name="PercentButton" Content="%"   Grid.Row="4" Grid.Column="0"/>

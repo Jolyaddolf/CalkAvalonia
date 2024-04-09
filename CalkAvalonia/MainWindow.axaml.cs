@@ -51,7 +51,7 @@ namespace CalkAvalonia
             ClearEntryButton.Click += ClearEntryButton_Click;
             ClearButton.Click += ClearButton_Click;
             Ravno.Click += Ravno_Click;
-            RootButton.Click += RootButton_Click;
+
             DivideButton.Click += DivideButton_Click;
             MultiplyButton.Click += MultiplyButton_Click;
             PercentButton.Click += PercentButton_Click;
@@ -136,11 +136,6 @@ namespace CalkAvalonia
         }
 
         private void PercentButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void RootButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -248,19 +243,25 @@ namespace CalkAvalonia
         }
 
 
-        private void PiButton2_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void PiButton2_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)// лиш€€ кнопка 
         {
-            throw new System.NotImplementedException();
+           ;
         }
 
-        private void CubedButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void CubedButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)// 10x
         {
-            throw new System.NotImplementedException();
+            double number1 = Convert.ToDouble(TextBox.Text);
+            double number2 = 10;
+            double number = Convert.ToDouble(Math.Pow(number2, number1));
+            TextBox.Text = $"{number}";
         }
 
-        private void SquareButton_Click1(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+        private void SquareButton_Click1(object? sender, Avalonia.Interactivity.RoutedEventArgs e)// ¬ычесление корн€ 
         {
-            throw new System.NotImplementedException();
+            double number1 = Convert.ToDouble(TextBox.Text);
+            double number2 = 10;
+            double number = Convert.ToDouble(Math.Pow(number2, number1));
+            TextBox.Text = $"{number}";
         }
 
         private void PowerButton_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
